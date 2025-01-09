@@ -1,0 +1,109 @@
+\chapter{Command-\/\+Line Personal Finance Manager}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Command-\/Line Personal Finance Manager@{Command-\/Line Personal Finance Manager}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+A command-\/line tool for managing personal finances. This project provides functionalities to add, modify, delete transactions, view logs, generate reports, and visualize financial data. It uses Python with pandas for data manipulation, matplotlib for plotting, and includes a logging system to track changes and errors.
+
+When trying out the application, you can delete the CSV files or keep it.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Features}{Features}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Add Transactions}}\+: Easily add new transactions with details including date, amount, category, and description.
+\item {\bfseries{Modify Transactions}}\+: Update existing transactions with new details.
+\item {\bfseries{Delete Transactions}}\+: Remove transactions from the records.
+\item {\bfseries{View Logs}}\+: Access logs for transactions, new entries, updates, and deletions.
+\item {\bfseries{Summary Reporting}}\+: View a summary of income and expenses, including total amounts and average transactions.
+\item {\bfseries{Income/\+Expense Breakdown}}\+: Generate detailed reports of income and expenses by description.
+\item {\bfseries{Visualization}}\+: Plot graphs to visualize income and expenses over time.
+\item {\bfseries{Documentation}}\+: Documented with Doxygen for detailed code description.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{md__r_e_a_d_m_e_autotoc_md2}
+You can access the detailed documentation for the project \href{https://nissubba2024.github.io/personal_finance_tracker/annotated.html}{\texttt{ here}}.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Technologies Used}{Technologies Used}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Programming Languages}}\+: Python
+\item {\bfseries{Data Analysis}}\+: pandas
+\item {\bfseries{Data Visualization}}\+: matplotlib
+\item {\bfseries{File Handling}}\+: CSV
+\item {\bfseries{Command-\/\+Line Interface}}\+: Custom menus and prompts
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item Clone the repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/nisSubba2024/personal\_finance\_tracker.git}
+\DoxyCodeLine{cd\ personal\_finance\_tracker}
+
+\end{DoxyCode}
+
+\item Create Virtual Environment 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3\ -\/m\ venv\ .venv}
+
+\end{DoxyCode}
+
+\item Activate Virtual Environment 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source\ .venv/bin/activate}
+
+\end{DoxyCode}
+
+\item Install requirements libraries 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip3\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Run the Program}}\+: Execute the {\ttfamily \doxylink{run_8py}{run.\+py}} script to start the program. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3\ run.py}
+
+\end{DoxyCode}
+
+\item {\bfseries{Add a New Transaction}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 1} from the main menu.
+\item Provide the required details such as date, amount, category, and description.
+\end{DoxyItemize}
+\item {\bfseries{Modify a Transaction}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 3} from the main menu.
+\item Choose the field to modify and provide new values.
+\end{DoxyItemize}
+\item {\bfseries{Delete a Transaction}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 4} from the main menu.
+\item Confirm the transaction ID to be deleted.
+\end{DoxyItemize}
+\item {\bfseries{View Logs}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 5} from the main menu.
+\item Choose which log to view (Transactions Log, New Entry Log, Update Log, Delete Log).
+\end{DoxyItemize}
+\item {\bfseries{View Summary Balance}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 6} from the main menu.
+\item View a summary of total income, total expenses, and net savings.
+\end{DoxyItemize}
+\item {\bfseries{View Income/\+Expense Report}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 7} from the main menu.
+\item Choose to view either the Income Report or Expense Report.
+\end{DoxyItemize}
+\item {\bfseries{Exit}}\+:
+\begin{DoxyItemize}
+\item Select option {\ttfamily 8} from the main menu to exit the program.
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{File Descriptions}{File Descriptions}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily \doxylink{run_8py}{run.\+py}}}}\+: Main file to run the program.
+\item {\bfseries{{\ttfamily \doxylink{ascii__art_8py}{ascii\+\_\+art.\+py}}}}\+: Contains ASCII art for title of the program.
+\item {\bfseries{{\ttfamily \doxylink{user__entry__manager_8py}{user\+\_\+entry\+\_\+manager.\+py}}}}\+: Manages user inputs and validation.
+\item {\bfseries{{\ttfamily \doxylink{csv__manager_8py}{csv\+\_\+manager.\+py}}}}\+: Handles CSV file operations and data manipulation.
+\item {\bfseries{{\ttfamily \doxylink{update__log__manager_8py}{update\+\_\+log\+\_\+manager.\+py}}}}\+: Manages logging of transaction updates, deletions, and other modifications.
+\item {\bfseries{{\ttfamily \doxylink{report__manager_8py}{report\+\_\+manager.\+py}}}}\+: Generates and displays reports and visualizations. 
+\end{DoxyItemize}

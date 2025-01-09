@@ -24,7 +24,15 @@
 */
 var NAVTREE =
 [
-  [ "Word Search", "index.html", [
+  [ "Personal Finance Tracker", "index.html", [
+    [ "Command-Line Personal Finance Manager", "md__r_e_a_d_m_e.html", [
+      [ "Features", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Technologies Used", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Installation", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Usage", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "File Descriptions", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

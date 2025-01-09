@@ -1,6 +1,17 @@
 var searchData=
 [
-  ['which_5fupdate_5ffield_0',['which_update_field',['../classcsv__manager_1_1_c_s_v_manager.html#a34cda6a9c0a379e199e918257fce3bdb',1,'csv_manager::CSVManager']]],
-  ['write_5fto_5fcsv_1',['write_to_csv',['../classcsv__manager_1_1_c_s_v_manager.html#aaf7a9d5aa74d2afbf765e0432c811fd2',1,'csv_manager::CSVManager']]],
-  ['write_5fto_5flogs_2',['write_to_logs',['../classcsv__manager_1_1_c_s_v_manager.html#a643f70a933a89f1c57743e5ae2063d49',1,'csv_manager::CSVManager']]]
+  ['update_5fdelete_5flog_0',['update_delete_log',['../classcsv__manager_1_1_c_s_v_manager.html#a0b12cc67e64a93134da8caab4edce595',1,'csv_manager::CSVManager']]],
+  ['update_5ffield_5fchoices_1',['UPDATE_FIELD_CHOICES',['../classcsv__manager_1_1_c_s_v_manager.html#a5ed9dbaad64d859bd556bd8f057c1dd7',1,'csv_manager::CSVManager']]],
+  ['update_5flog_5fmanager_2',['update_log_manager',['../namespaceupdate__log__manager.html',1,'']]],
+  ['update_5flog_5fmanager_2epy_3',['update_log_manager.py',['../update__log__manager_8py.html',1,'']]],
+  ['update_5fnew_5fentry_5flog_4',['update_new_entry_log',['../classcsv__manager_1_1_c_s_v_manager.html#a248cd0a73e579a9c9eed4a12b9210be5',1,'csv_manager::CSVManager']]],
+  ['update_5ftransactions_5',['update_transactions',['../classcsv__manager_1_1_c_s_v_manager.html#a8931424428bf56fedf190f262fce0d0b',1,'csv_manager::CSVManager']]],
+  ['update_5fupdate_5flog_6',['update_update_log',['../classcsv__manager_1_1_c_s_v_manager.html#a805bf25860c7ece8485a00371d205e30',1,'csv_manager::CSVManager']]],
+  ['updatelogmanager_7',['UpdateLogManager',['../classupdate__log__manager_1_1_update_log_manager.html',1,'update_log_manager']]],
+  ['updates_5ftype_8',['updates_type',['../classcsv__manager_1_1_c_s_v_manager.html#acbe6a6cbaee9de632b1d5c506dac1668',1,'csv_manager::CSVManager']]],
+  ['usage_9',['Usage',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['used_10',['Technologies Used',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['user_5fentry_5fmanager_11',['user_entry_manager',['../namespaceuser__entry__manager.html',1,'']]],
+  ['user_5fentry_5fmanager_2epy_12',['user_entry_manager.py',['../user__entry__manager_8py.html',1,'']]],
+  ['userentrymanager_13',['UserEntryManager',['../classuser__entry__manager_1_1_user_entry_manager.html',1,'user_entry_manager']]]
 ];
