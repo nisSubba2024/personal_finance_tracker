@@ -1,0 +1,93 @@
+\doxysection{report\+\_\+manager.\+Report\+Manager Class Reference}
+\hypertarget{classreport__manager_1_1_report_manager}{}\label{classreport__manager_1_1_report_manager}\index{report\_manager.ReportManager@{report\_manager.ReportManager}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classreport__manager_1_1_report_manager_a748e91512b32003267872068e66476ec}{view\+\_\+logs}} ()
+\item 
+\mbox{\hyperlink{classreport__manager_1_1_report_manager_ab3f011401b3ccfc36d2775bf2c90e6c0}{view\+\_\+summary}} ()
+\item 
+\mbox{\hyperlink{classreport__manager_1_1_report_manager_aedce17c8d8356c15417968bda82016ad}{plot\+\_\+transactions}} (df)
+\item 
+\mbox{\hyperlink{classreport__manager_1_1_report_manager_ab312bf1c751de05e2d78e42e6af9a6a1}{view\+\_\+income\+\_\+expense\+\_\+report}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Manages the generation and viewing of various reports and logs.
+
+Methods:
+    view_logs: Displays available log records for different types of logs.
+    view_summary: Displays a summary of transactions including net amounts.
+    plot_transactions: Plots income and expenses over time.
+    view_income_expense_report: Generates and displays income or expense reports.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classreport__manager_1_1_report_manager_aedce17c8d8356c15417968bda82016ad}\index{report\_manager.ReportManager@{report\_manager.ReportManager}!plot\_transactions@{plot\_transactions}}
+\index{plot\_transactions@{plot\_transactions}!report\_manager.ReportManager@{report\_manager.ReportManager}}
+\doxysubsubsection{\texorpdfstring{plot\_transactions()}{plot\_transactions()}}
+{\footnotesize\ttfamily \label{classreport__manager_1_1_report_manager_aedce17c8d8356c15417968bda82016ad} 
+report\+\_\+manager.\+Report\+Manager.\+plot\+\_\+transactions (\begin{DoxyParamCaption}\item[{}]{df}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Plots income and expenses over time.
+
+Args:
+    df (pandas.DataFrame): DataFrame containing transaction data with columns 'date', 'category', and 'amount'.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classreport__manager_1_1_report_manager_ab312bf1c751de05e2d78e42e6af9a6a1}\index{report\_manager.ReportManager@{report\_manager.ReportManager}!view\_income\_expense\_report@{view\_income\_expense\_report}}
+\index{view\_income\_expense\_report@{view\_income\_expense\_report}!report\_manager.ReportManager@{report\_manager.ReportManager}}
+\doxysubsubsection{\texorpdfstring{view\_income\_expense\_report()}{view\_income\_expense\_report()}}
+{\footnotesize\ttfamily \label{classreport__manager_1_1_report_manager_ab312bf1c751de05e2d78e42e6af9a6a1} 
+report\+\_\+manager.\+Report\+Manager.\+view\+\_\+income\+\_\+expense\+\_\+report (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Displays a menu for the user to select which income or expense report to view.
+
+Options include:
+    - Income Report
+    - Expense Report
+    - Cancel
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classreport__manager_1_1_report_manager_a748e91512b32003267872068e66476ec}\index{report\_manager.ReportManager@{report\_manager.ReportManager}!view\_logs@{view\_logs}}
+\index{view\_logs@{view\_logs}!report\_manager.ReportManager@{report\_manager.ReportManager}}
+\doxysubsubsection{\texorpdfstring{view\_logs()}{view\_logs()}}
+{\footnotesize\ttfamily \label{classreport__manager_1_1_report_manager_a748e91512b32003267872068e66476ec} 
+report\+\_\+manager.\+Report\+Manager.\+view\+\_\+logs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Displays a menu for the user to select which log to view.
+
+Options include:
+    - Transactions Log
+    - New Entry Log
+    - Update Log
+    - Delete Log
+    - Cancel
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classreport__manager_1_1_report_manager_ab3f011401b3ccfc36d2775bf2c90e6c0}\index{report\_manager.ReportManager@{report\_manager.ReportManager}!view\_summary@{view\_summary}}
+\index{view\_summary@{view\_summary}!report\_manager.ReportManager@{report\_manager.ReportManager}}
+\doxysubsubsection{\texorpdfstring{view\_summary()}{view\_summary()}}
+{\footnotesize\ttfamily \label{classreport__manager_1_1_report_manager_ab3f011401b3ccfc36d2775bf2c90e6c0} 
+report\+\_\+manager.\+Report\+Manager.\+view\+\_\+summary (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Displays a summary of transactions, including net amounts.
+
+Reads transaction data from the CSV file and generates a summary of income and expenses.
+
+Returns:
+    None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{report__manager_8py}{report\+\_\+manager.\+py}}\end{DoxyCompactItemize}

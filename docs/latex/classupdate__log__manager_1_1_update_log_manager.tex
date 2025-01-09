@@ -1,0 +1,77 @@
+\doxysection{update\+\_\+log\+\_\+manager.\+Update\+Log\+Manager Class Reference}
+\hypertarget{classupdate__log__manager_1_1_update_log_manager}{}\label{classupdate__log__manager_1_1_update_log_manager}\index{update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classupdate__log__manager_1_1_update_log_manager_acb1fabf9f71408e9dc2b39ac250b4445}{add}} ()
+\item 
+\mbox{\hyperlink{classupdate__log__manager_1_1_update_log_manager_ac6019901d53a9ebbfb9140a11e453af5}{modify}} ()
+\item 
+\mbox{\hyperlink{classupdate__log__manager_1_1_update_log_manager_a73a2cba0998276a07911262378858b82}{delete}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Manages the addition, modification, and deletion of transaction records.
+
+Methods:
+    add: Adds a new transaction entry.
+    modify: Modifies an existing transaction entry.
+    delete: Deletes a transaction entry.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classupdate__log__manager_1_1_update_log_manager_acb1fabf9f71408e9dc2b39ac250b4445}\index{update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}!add@{add}}
+\index{add@{add}!update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{classupdate__log__manager_1_1_update_log_manager_acb1fabf9f71408e9dc2b39ac250b4445} 
+update\+\_\+log\+\_\+manager.\+Update\+Log\+Manager.\+add (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Prompts the user to enter transaction details and adds a new entry to the CSV file.
+
+Gets the following details from the user:
+    - Date of the transaction
+    - Amount
+    - Category
+    - Description
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classupdate__log__manager_1_1_update_log_manager_a73a2cba0998276a07911262378858b82}\index{update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}!delete@{delete}}
+\index{delete@{delete}!update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{classupdate__log__manager_1_1_update_log_manager_a73a2cba0998276a07911262378858b82} 
+update\+\_\+log\+\_\+manager.\+Update\+Log\+Manager.\+delete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Deletes a transaction entry based on the provided transaction ID.
+
+The method verifies if the transaction ID exists before attempting to delete.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classupdate__log__manager_1_1_update_log_manager_ac6019901d53a9ebbfb9140a11e453af5}\index{update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}!modify@{modify}}
+\index{modify@{modify}!update\_log\_manager.UpdateLogManager@{update\_log\_manager.UpdateLogManager}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily \label{classupdate__log__manager_1_1_update_log_manager_ac6019901d53a9ebbfb9140a11e453af5} 
+update\+\_\+log\+\_\+manager.\+Update\+Log\+Manager.\+modify (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Modifies an existing transaction entry based on user input.
+
+The user can choose to modify:
+    - Date
+    - Category
+    - Amount
+    - Description
+    - Or cancel the operation
+
+Returns:
+    None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{update__log__manager_8py}{update\+\_\+log\+\_\+manager.\+py}}\end{DoxyCompactItemize}

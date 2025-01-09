@@ -1,0 +1,130 @@
+\doxysection{user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager Class Reference}
+\hypertarget{classuser__entry__manager_1_1_user_entry_manager}{}\label{classuser__entry__manager_1_1_user_entry_manager}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_a8050e6fe3bf4eac420e3f2c75d8ac938}{get\+\_\+date}} (cls, prompt, allow\+\_\+default=False)
+\item 
+\mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_a11607e04a21c8efd6b8c8cd8d4c51c90}{get\+\_\+amount}} (cls)
+\item 
+\mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_acc0c360877ae62ab5f1bf7064cf04d9b}{get\+\_\+category}} (cls)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_ae4754527b277f66e31c3020cdceca79e}{get\+\_\+transaction\+\_\+id}} ()
+\item 
+\mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_a20795ee0db226daa4042860b07161f1b}{get\+\_\+description}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_ad53df83efebe4eec484392f9a1a7986e}{DATE\+\_\+\+FORMAT}} = "{}\%m-\/\%d-\/\%Y"{}
+\item 
+dict \mbox{\hyperlink{classuser__entry__manager_1_1_user_entry_manager_abf99fb5b11ca1f6920a05c5b39d53ce3}{CATEGORIES}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Manages user entry for transactions, including date, amount, category, and description.
+
+Attributes:
+    DATE_FORMAT (str): The format used for parsing and displaying dates.
+    CATEGORIES (dict): Mapping of input to transaction categories ('I' for Income, 'E' for Expense).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classuser__entry__manager_1_1_user_entry_manager_a11607e04a21c8efd6b8c8cd8d4c51c90}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!get\_amount@{get\_amount}}
+\index{get\_amount@{get\_amount}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{get\_amount()}{get\_amount()}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_a11607e04a21c8efd6b8c8cd8d4c51c90} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+get\+\_\+amount (\begin{DoxyParamCaption}\item[{}]{cls}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prompts the user to input a valid amount for the transaction.
+
+Returns:
+    float: A valid transaction amount entered by the user.
+
+Raises:
+    ValueError: If the entered amount is less than or equal to zero.
+\end{DoxyVerb}
+ \Hypertarget{classuser__entry__manager_1_1_user_entry_manager_acc0c360877ae62ab5f1bf7064cf04d9b}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!get\_category@{get\_category}}
+\index{get\_category@{get\_category}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{get\_category()}{get\_category()}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_acc0c360877ae62ab5f1bf7064cf04d9b} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+get\+\_\+category (\begin{DoxyParamCaption}\item[{}]{cls}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prompts the user to input a category ('I' for Income, 'E' for Expense).
+
+Returns:
+    str: The corresponding category (Income/Expense) based on the user's input.
+
+Raises:
+    ValueError: If an invalid category is entered.
+\end{DoxyVerb}
+ \Hypertarget{classuser__entry__manager_1_1_user_entry_manager_a8050e6fe3bf4eac420e3f2c75d8ac938}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!get\_date@{get\_date}}
+\index{get\_date@{get\_date}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{get\_date()}{get\_date()}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_a8050e6fe3bf4eac420e3f2c75d8ac938} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+get\+\_\+date (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{prompt}{, }\item[{}]{allow\+\_\+default}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prompts the user for a date in the format 'mm-dd-yyyy'. Optionally allows defaulting to today's date.
+
+Args:
+    prompt (str): The prompt message for the user.
+    allow_default (bool): If True, the user can leave the date blank to default to today's date.
+
+Returns:
+    str: A valid date string in 'mm-dd-yyyy' format.
+\end{DoxyVerb}
+ \Hypertarget{classuser__entry__manager_1_1_user_entry_manager_a20795ee0db226daa4042860b07161f1b}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!get\_description@{get\_description}}
+\index{get\_description@{get\_description}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{get\_description()}{get\_description()}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_a20795ee0db226daa4042860b07161f1b} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+get\+\_\+description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Prompts the user for an optional description of the transaction.
+
+Returns:
+    str: The description entered by the user, or an empty string if not provided.
+\end{DoxyVerb}
+ \Hypertarget{classuser__entry__manager_1_1_user_entry_manager_ae4754527b277f66e31c3020cdceca79e}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!get\_transaction\_id@{get\_transaction\_id}}
+\index{get\_transaction\_id@{get\_transaction\_id}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_id()}{get\_transaction\_id()}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_ae4754527b277f66e31c3020cdceca79e} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+get\+\_\+transaction\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Prompts the user to input a transaction ID.
+
+Returns:
+    int: The transaction ID entered by the user.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuser__entry__manager_1_1_user_entry_manager_abf99fb5b11ca1f6920a05c5b39d53ce3}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!CATEGORIES@{CATEGORIES}}
+\index{CATEGORIES@{CATEGORIES}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{CATEGORIES}{CATEGORIES}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_abf99fb5b11ca1f6920a05c5b39d53ce3} 
+dict user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+CATEGORIES\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}I"{}}:\ \textcolor{stringliteral}{"{}Income"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}E"{}}:\ \textcolor{stringliteral}{"{}Expense"{}}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classuser__entry__manager_1_1_user_entry_manager_ad53df83efebe4eec484392f9a1a7986e}\index{user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}!DATE\_FORMAT@{DATE\_FORMAT}}
+\index{DATE\_FORMAT@{DATE\_FORMAT}!user\_entry\_manager.UserEntryManager@{user\_entry\_manager.UserEntryManager}}
+\doxysubsubsection{\texorpdfstring{DATE\_FORMAT}{DATE\_FORMAT}}
+{\footnotesize\ttfamily \label{classuser__entry__manager_1_1_user_entry_manager_ad53df83efebe4eec484392f9a1a7986e} 
+user\+\_\+entry\+\_\+manager.\+User\+Entry\+Manager.\+DATE\+\_\+\+FORMAT = "{}\%m-\/\%d-\/\%Y"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{user__entry__manager_8py}{user\+\_\+entry\+\_\+manager.\+py}}\end{DoxyCompactItemize}

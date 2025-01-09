@@ -1,0 +1,355 @@
+\doxysection{csv\+\_\+manager.\+CSVManager Class Reference}
+\hypertarget{classcsv__manager_1_1_c_s_v_manager}{}\label{classcsv__manager_1_1_c_s_v_manager}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_ae52e8238dbabd6324868a1d3d4a905df}{initialize\+\_\+csv}} (cls)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a57c59ecfa776516beaefe4ee0227a13f}{add\+\_\+entry}} (cls, date, amount, category, description)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a643f70a933a89f1c57743e5ae2063d49}{write\+\_\+to\+\_\+logs}} (cls, index\+\_\+of\+\_\+file, entry, update\+\_\+type\+\_\+index)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_aaf7a9d5aa74d2afbf765e0432c811fd2}{write\+\_\+to\+\_\+csv}} (cls, data\+\_\+frame)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a7dc57e3ef3450b879fd4cc789348158b}{get\+\_\+transactions}} (cls, start\+\_\+date, end\+\_\+date)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a26eba45bca7c57a389c1adb6a9704059}{net\+\_\+amount}} (cls, df)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a8c46ee2607d67ba9cd84ee078ef45844}{verify\+\_\+transaction\+\_\+id}} (cls, transaction\+\_\+id)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a8931424428bf56fedf190f262fce0d0b}{update\+\_\+transactions}} (cls, transaction\+\_\+id, update\+\_\+field, new\+\_\+value)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a1f91d423ae18a3edc4231acedb7f6243}{get\+\_\+current\+\_\+time}} (cls)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_aa267aa8fb8afab0e7de5b862178a41cc}{delete\+\_\+transaction}} (cls, transaction\+\_\+id)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_acbe6a6cbaee9de632b1d5c506dac1668}{updates\+\_\+type}} (cls, index\+\_\+of\+\_\+modification)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a248cd0a73e579a9c9eed4a12b9210be5}{update\+\_\+new\+\_\+entry\+\_\+log}} (cls, timestamp, transaction\+\_\+id, update\+\_\+type, success, message)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a0b12cc67e64a93134da8caab4edce595}{update\+\_\+delete\+\_\+log}} (cls, timestamp, transaction\+\_\+id, update\+\_\+type, message, success, del\+\_\+record\+\_\+date, del\+\_\+record\+\_\+category, del\+\_\+record\+\_\+amount, del\+\_\+record\+\_\+description)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a805bf25860c7ece8485a00371d205e30}{update\+\_\+update\+\_\+log}} (cls, timestamp, transaction\+\_\+id, update\+\_\+type, field\+\_\+update, success, old\+\_\+value, new\+\_\+value)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a01001400cc7f82ca84e55b64796e3eeb}{view\+\_\+records}} (cls, index)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a24655f08bad3c7da69e63b2e2721592b}{expense\+\_\+income\+\_\+report}} (cls, report\+\_\+type)
+\item 
+\mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a34cda6a9c0a379e199e918257fce3bdb}{which\+\_\+update\+\_\+field}} (cls, field\+\_\+index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a19385133efc35a97bf49d608b03bad20}{CSV\+\_\+\+FILES\+\_\+\+DICT}}
+\item 
+list \mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_abe114a15c769c1778a47f51b3cd59f5c}{MODIFICATIONS}} = \mbox{[}"{}updated"{}, "{}deleted"{}, "{}new entry"{}\mbox{]}
+\item 
+str \mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_ae7ba80155a2ccdefdd40adb1579b60a0}{FORMAT}} = "{}\%m-\/\%d-\/\%Y"{}
+\item 
+list \mbox{\hyperlink{classcsv__manager_1_1_c_s_v_manager_a5ed9dbaad64d859bd556bd8f057c1dd7}{UPDATE\+\_\+\+FIELD\+\_\+\+CHOICES}} = \mbox{[}"{}date"{}, "{}category"{}, "{}amount"{}, "{}description"{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Manages CSV files related to financial transactions and logs various updates.
+
+Attributes:
+    CSV_FILES_DICT (list of dict): Configuration of CSV files with their names, paths, and columns.
+    MODIFICATIONS (list of str): Types of modifications that can be logged.
+    FORMAT (str): Date format used for date columns.
+    UPDATE_FIELD_CHOICES (list of str): Fields that can be updated in transactions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcsv__manager_1_1_c_s_v_manager_a57c59ecfa776516beaefe4ee0227a13f}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!add\_entry@{add\_entry}}
+\index{add\_entry@{add\_entry}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{add\_entry()}{add\_entry()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a57c59ecfa776516beaefe4ee0227a13f} 
+csv\+\_\+manager.\+CSVManager.\+add\+\_\+entry (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{date}{, }\item[{}]{amount}{, }\item[{}]{category}{, }\item[{}]{description}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a new transaction entry to the transaction records CSV file.
+
+Args:
+    date (str): The date of the transaction.
+    amount (float): The amount of the transaction.
+    category (str): The category of the transaction.
+    description (str): A description of the transaction.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_aa267aa8fb8afab0e7de5b862178a41cc}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!delete\_transaction@{delete\_transaction}}
+\index{delete\_transaction@{delete\_transaction}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{delete\_transaction()}{delete\_transaction()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_aa267aa8fb8afab0e7de5b862178a41cc} 
+csv\+\_\+manager.\+CSVManager.\+delete\+\_\+transaction (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{transaction\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deletes a transaction record based on the provided transaction ID.
+
+Args:
+    transaction_id (int): The transaction ID of the record to delete.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a24655f08bad3c7da69e63b2e2721592b}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!expense\_income\_report@{expense\_income\_report}}
+\index{expense\_income\_report@{expense\_income\_report}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{expense\_income\_report()}{expense\_income\_report()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a24655f08bad3c7da69e63b2e2721592b} 
+csv\+\_\+manager.\+CSVManager.\+expense\+\_\+income\+\_\+report (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{report\+\_\+type}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates a report of expenses or income, grouped by description and ordered by amount.
+
+Args:
+    report_type (str): The type of report to generate ("Expense" or "Income").
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a1f91d423ae18a3edc4231acedb7f6243}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!get\_current\_time@{get\_current\_time}}
+\index{get\_current\_time@{get\_current\_time}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{get\_current\_time()}{get\_current\_time()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a1f91d423ae18a3edc4231acedb7f6243} 
+csv\+\_\+manager.\+CSVManager.\+get\+\_\+current\+\_\+time (\begin{DoxyParamCaption}\item[{}]{cls}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves the current time formatted according to the class date format.
+
+Returns:
+    str: The current time as a formatted string.
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a7dc57e3ef3450b879fd4cc789348158b}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!get\_transactions@{get\_transactions}}
+\index{get\_transactions@{get\_transactions}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{get\_transactions()}{get\_transactions()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a7dc57e3ef3450b879fd4cc789348158b} 
+csv\+\_\+manager.\+CSVManager.\+get\+\_\+transactions (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{start\+\_\+date}{, }\item[{}]{end\+\_\+date}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves transactions within a specified date range.
+
+Args:
+    start_date (str): The start date of the range.
+    end_date (str): The end date of the range.
+
+Returns:
+    pd.DataFrame: DataFrame containing transactions within the date range.
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_ae52e8238dbabd6324868a1d3d4a905df}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!initialize\_csv@{initialize\_csv}}
+\index{initialize\_csv@{initialize\_csv}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{initialize\_csv()}{initialize\_csv()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_ae52e8238dbabd6324868a1d3d4a905df} 
+csv\+\_\+manager.\+CSVManager.\+initialize\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{cls}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes CSV files if they do not already exist by creating empty files with the appropriate columns.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a26eba45bca7c57a389c1adb6a9704059}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!net\_amount@{net\_amount}}
+\index{net\_amount@{net\_amount}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{net\_amount()}{net\_amount()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a26eba45bca7c57a389c1adb6a9704059} 
+csv\+\_\+manager.\+CSVManager.\+net\+\_\+amount (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{df}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints a summary of financial transactions, including the number of entries, average income and expense,
+total income, total expense, and net savings.
+
+Args:
+    df (pd.DataFrame): DataFrame containing transaction data.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a0b12cc67e64a93134da8caab4edce595}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!update\_delete\_log@{update\_delete\_log}}
+\index{update\_delete\_log@{update\_delete\_log}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{update\_delete\_log()}{update\_delete\_log()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a0b12cc67e64a93134da8caab4edce595} 
+csv\+\_\+manager.\+CSVManager.\+update\+\_\+delete\+\_\+log (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{timestamp}{, }\item[{}]{transaction\+\_\+id}{, }\item[{}]{update\+\_\+type}{, }\item[{}]{message}{, }\item[{}]{success}{, }\item[{}]{del\+\_\+record\+\_\+date}{, }\item[{}]{del\+\_\+record\+\_\+category}{, }\item[{}]{del\+\_\+record\+\_\+amount}{, }\item[{}]{del\+\_\+record\+\_\+description}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Logs the deletion of a transaction to the deleted log records CSV file.
+
+Args:
+    timestamp (str): The timestamp of the log entry.
+    transaction_id (int): The transaction ID associated with the log entry.
+    update_type (str): The type of update (e.g., "Deleted").
+    message (str): A message regarding the log entry.
+    success (bool): Indicates whether the operation was successful.
+    del_record_date (str): The date of the deleted record.
+    del_record_category (str): The category of the deleted record.
+    del_record_amount (float): The amount of the deleted record.
+    del_record_description (str): The description of the deleted record.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a248cd0a73e579a9c9eed4a12b9210be5}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!update\_new\_entry\_log@{update\_new\_entry\_log}}
+\index{update\_new\_entry\_log@{update\_new\_entry\_log}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{update\_new\_entry\_log()}{update\_new\_entry\_log()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a248cd0a73e579a9c9eed4a12b9210be5} 
+csv\+\_\+manager.\+CSVManager.\+update\+\_\+new\+\_\+entry\+\_\+log (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{timestamp}{, }\item[{}]{transaction\+\_\+id}{, }\item[{}]{update\+\_\+type}{, }\item[{}]{success}{, }\item[{}]{message}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Logs the addition of a new entry to the new entry log records CSV file.
+
+Args:
+    timestamp (str): The timestamp of the log entry.
+    transaction_id (int): The transaction ID associated with the log entry.
+    update_type (str): The type of update (e.g., "New Entry").
+    success (bool): Indicates whether the operation was successful.
+    message (str): A message regarding the log entry.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a8931424428bf56fedf190f262fce0d0b}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!update\_transactions@{update\_transactions}}
+\index{update\_transactions@{update\_transactions}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{update\_transactions()}{update\_transactions()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a8931424428bf56fedf190f262fce0d0b} 
+csv\+\_\+manager.\+CSVManager.\+update\+\_\+transactions (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{transaction\+\_\+id}{, }\item[{}]{update\+\_\+field}{, }\item[{}]{new\+\_\+value}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates a specific field of a transaction record with a new value.
+
+Args:
+    transaction_id (int): The transaction ID of the record to update.
+    update_field (str): The field to be updated.
+    new_value (str or float): The new value to set for the field.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a805bf25860c7ece8485a00371d205e30}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!update\_update\_log@{update\_update\_log}}
+\index{update\_update\_log@{update\_update\_log}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{update\_update\_log()}{update\_update\_log()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a805bf25860c7ece8485a00371d205e30} 
+csv\+\_\+manager.\+CSVManager.\+update\+\_\+update\+\_\+log (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{timestamp}{, }\item[{}]{transaction\+\_\+id}{, }\item[{}]{update\+\_\+type}{, }\item[{}]{field\+\_\+update}{, }\item[{}]{success}{, }\item[{}]{old\+\_\+value}{, }\item[{}]{new\+\_\+value}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Logs the update of a transaction field to the update log records CSV file.
+
+Args:
+    timestamp (str): The timestamp of the log entry.
+    transaction_id (int): The transaction ID associated with the log entry.
+    update_type (str): The type of update (e.g., "Updated").
+    field_update (str): The field that was updated.
+    success (bool): Indicates whether the operation was successful.
+    old_value (str or float): The old value of the updated field.
+    new_value (str or float): The new value of the updated field.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_acbe6a6cbaee9de632b1d5c506dac1668}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!updates\_type@{updates\_type}}
+\index{updates\_type@{updates\_type}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{updates\_type()}{updates\_type()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_acbe6a6cbaee9de632b1d5c506dac1668} 
+csv\+\_\+manager.\+CSVManager.\+updates\+\_\+type (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{index\+\_\+of\+\_\+modification}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints the update type and the current time.
+
+Args:
+    index_of_modification (int): Index of the modification type in MODIFICATIONS.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a8c46ee2607d67ba9cd84ee078ef45844}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!verify\_transaction\_id@{verify\_transaction\_id}}
+\index{verify\_transaction\_id@{verify\_transaction\_id}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{verify\_transaction\_id()}{verify\_transaction\_id()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a8c46ee2607d67ba9cd84ee078ef45844} 
+csv\+\_\+manager.\+CSVManager.\+verify\+\_\+transaction\+\_\+id (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{transaction\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verifies if a given transaction ID exists in the transaction records.
+
+Args:
+    transaction_id (int): The transaction ID to be verified.
+
+Returns:
+    bool: True if the transaction ID is found, False otherwise.
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a01001400cc7f82ca84e55b64796e3eeb}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!view\_records@{view\_records}}
+\index{view\_records@{view\_records}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{view\_records()}{view\_records()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a01001400cc7f82ca84e55b64796e3eeb} 
+csv\+\_\+manager.\+CSVManager.\+view\+\_\+records (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{index}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays records from the specified CSV file.
+
+Args:
+    index (int): The index of the CSV file configuration in CSV_FILES_DICT.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a34cda6a9c0a379e199e918257fce3bdb}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!which\_update\_field@{which\_update\_field}}
+\index{which\_update\_field@{which\_update\_field}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{which\_update\_field()}{which\_update\_field()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a34cda6a9c0a379e199e918257fce3bdb} 
+csv\+\_\+manager.\+CSVManager.\+which\+\_\+update\+\_\+field (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{field\+\_\+index}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves the field name based on the provided index.
+
+Args:
+    field_index (int): The index of the field in UPDATE_FIELD_CHOICES.
+
+Returns:
+    str: The name of the field corresponding to the index.
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_aaf7a9d5aa74d2afbf765e0432c811fd2}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!write\_to\_csv@{write\_to\_csv}}
+\index{write\_to\_csv@{write\_to\_csv}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{write\_to\_csv()}{write\_to\_csv()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_aaf7a9d5aa74d2afbf765e0432c811fd2} 
+csv\+\_\+manager.\+CSVManager.\+write\+\_\+to\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{data\+\_\+frame}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes a DataFrame to the transaction records CSV file.
+
+Args:
+    data_frame (pd.DataFrame): The DataFrame to be written to CSV.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classcsv__manager_1_1_c_s_v_manager_a643f70a933a89f1c57743e5ae2063d49}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!write\_to\_logs@{write\_to\_logs}}
+\index{write\_to\_logs@{write\_to\_logs}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{write\_to\_logs()}{write\_to\_logs()}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a643f70a933a89f1c57743e5ae2063d49} 
+csv\+\_\+manager.\+CSVManager.\+write\+\_\+to\+\_\+logs (\begin{DoxyParamCaption}\item[{}]{cls}{, }\item[{}]{index\+\_\+of\+\_\+file}{, }\item[{}]{entry}{, }\item[{}]{update\+\_\+type\+\_\+index}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes a log entry to the specified log file.
+
+Args:
+    index_of_file (int): The index of the CSV_FILES_DICT for the target log file.
+    entry (dict): The log entry to be written.
+    update_type_index (int): Index of the update type in MODIFICATIONS.
+
+Returns:
+    None
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcsv__manager_1_1_c_s_v_manager_a19385133efc35a97bf49d608b03bad20}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!CSV\_FILES\_DICT@{CSV\_FILES\_DICT}}
+\index{CSV\_FILES\_DICT@{CSV\_FILES\_DICT}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{CSV\_FILES\_DICT}{CSV\_FILES\_DICT}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a19385133efc35a97bf49d608b03bad20} 
+list csv\+\_\+manager.\+CSVManager.\+CSV\+\_\+\+FILES\+\_\+\+DICT\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classcsv__manager_1_1_c_s_v_manager_ae7ba80155a2ccdefdd40adb1579b60a0}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!FORMAT@{FORMAT}}
+\index{FORMAT@{FORMAT}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{FORMAT}{FORMAT}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_ae7ba80155a2ccdefdd40adb1579b60a0} 
+str csv\+\_\+manager.\+CSVManager.\+FORMAT = "{}\%m-\/\%d-\/\%Y"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classcsv__manager_1_1_c_s_v_manager_abe114a15c769c1778a47f51b3cd59f5c}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!MODIFICATIONS@{MODIFICATIONS}}
+\index{MODIFICATIONS@{MODIFICATIONS}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{MODIFICATIONS}{MODIFICATIONS}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_abe114a15c769c1778a47f51b3cd59f5c} 
+list csv\+\_\+manager.\+CSVManager.\+MODIFICATIONS = \mbox{[}"{}updated"{}, "{}deleted"{}, "{}new entry"{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classcsv__manager_1_1_c_s_v_manager_a5ed9dbaad64d859bd556bd8f057c1dd7}\index{csv\_manager.CSVManager@{csv\_manager.CSVManager}!UPDATE\_FIELD\_CHOICES@{UPDATE\_FIELD\_CHOICES}}
+\index{UPDATE\_FIELD\_CHOICES@{UPDATE\_FIELD\_CHOICES}!csv\_manager.CSVManager@{csv\_manager.CSVManager}}
+\doxysubsubsection{\texorpdfstring{UPDATE\_FIELD\_CHOICES}{UPDATE\_FIELD\_CHOICES}}
+{\footnotesize\ttfamily \label{classcsv__manager_1_1_c_s_v_manager_a5ed9dbaad64d859bd556bd8f057c1dd7} 
+list csv\+\_\+manager.\+CSVManager.\+UPDATE\+\_\+\+FIELD\+\_\+\+CHOICES = \mbox{[}"{}date"{}, "{}category"{}, "{}amount"{}, "{}description"{}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{csv__manager_8py}{csv\+\_\+manager.\+py}}\end{DoxyCompactItemize}
